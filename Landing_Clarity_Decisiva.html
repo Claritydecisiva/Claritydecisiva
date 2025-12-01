@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clarity Decisiva — Claridad para tus decisiones</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#f6a436;--white:#ffffff}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071021 0%, #071720 100%);color:var(--white)}
+    .container{max-width:980px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#1f2937,#0f1724);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin-top:6px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    .card{background:rgba(255,255,255,0.03);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .plans{display:flex;flex-direction:column;gap:12px}
+    .plan{display:flex;align-items:center;justify-content:space-between;padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .plan .left{max-width:68%}
+    .price{font-weight:700;color:var(--accent);font-size:18px}
+    .small{color:var(--muted);font-size:13px}
+    .cta{display:flex;gap:10px;margin-top:16px}
+    .btn{background:var(--accent);color:#0b1220;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white);padding:10px 12px;border-radius:8px}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    .feature{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px}
+    .faq{margin-top:22px}
+    footer{margin-top:30px;color:var(--muted);font-size:13px}
+    table{width:100%;border-collapse:collapse;color:var(--white);margin-top:12px}
+    td,th{padding:8px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
+    th{color:var(--muted);font-weight:600;font-size:13px}
+    .note{font-size:13px;color:var(--muted);margin-top:8px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.plans{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">CD</div>
+        <div>
+          <h1>Clarity Decisiva</h1>
+          <p class="lead">Claridad inmediata para tu mente, tus decisiones y tu vida.</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#planes" class="ghost">Ver planes</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h2>Un espacio para entender lo que te pasa y decidir con seguridad</h2>
+        <p class="small">Acompañamiento continuo, disponible 24/7, sin juicios y sin complicaciones. Una IA preparada para ofrecer claridad + intervenciones humanas honestas cuando las necesites.</p>
+
+        <div class="features">
+          <div class="feature"><strong>24/7 disponible</strong><div class="small">Acceso continuado a la IA de claridad.</div></div>
+          <div class="feature"><strong>Anonimato</strong><div class="small">Tu identidad puede mantenerse en privado.</div></div>
+          <div class="feature"><strong>Sencillo</strong><div class="small">Sin papeleo ni complejidades técnicas.</div></div>
+          <div class="feature"><strong>Flexible</strong><div class="small">Elige la forma de contacto que prefieras.</div></div>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="#planes">Ver planes</a>
+          <a class="ghost" href="mailto:claritydecisiva@gmail.com">Contactar</a>
+        </div>
+
+        <div class="note">Nota: Este servicio se presenta con honestidad: la propuesta incluye acompañamiento humano real cuando se contrata.</div>
+      </div>
+
+      <aside class="card">
+        <h3>Empieza ahora</h3>
+        <p class="small">Elige un plan y comienza a recibir claridad hoy mismo.</p>
+        <div style="margin-top:10px" id="mini-plans">
+          <div class="plan"><div class="left"><strong>Plan Base</strong><div class="small">Acceso 24/7 · Chat ilimitado</div></div><div class="price">29 €/mes</div></div>
+          <div class="plan"><div class="left"><strong>Plan Plus</strong><div class="small">Acceso 24/7 · 1 consulta escrita/mes (24–48h)</div></div><div class="price">49 €/mes</div></div>
+          <div class="plan"><div class="left"><strong>Plan Premium</strong><div class="small">Acceso 24/7 · Prioridad · 1 videollamada 20min * o 3 consultas escritas</div></div><div class="price">99 €/mes</div></div>
+          <div class="plan"><div class="left"><strong>Plan Elite</strong><div class="small">Acceso 24/7 · Prioridad absoluta · 1 sesión de 1h guiada por dos personas</div></div><div class="price">239 €/mes</div></div>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <a class="btn" href="#planes">Ver detalles</a>
+          <a class="ghost" href="mailto:claritydecisiva@gmail.com">Reservar</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="planes" style="margin-top:24px">
+      <div class="card">
+        <h2>Planes</h2>
+        <p class="small">Elige el nivel de acompañamiento que mejor encaje con lo que necesitas hoy.</p>
+
+        <table aria-label="tabla planes">
+          <thead>
+            <tr><th>Características</th><th>Plan Base</th><th>Plan Plus</th><th>Plan Premium</th><th>Plan Elite</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Precio mensual</td><td>29 €/mes</td><td>49 €/mes</td><td>99 €/mes</td><td>239 €/mes</td></tr>
+            <tr><td>Acceso a Clarity Decisiva 24/7</td><td>Sí</td><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td>Chat ilimitado con la IA</td><td>Sí</td><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td>Prioridad en respuestas</td><td>No</td><td>No</td><td>Sí</td><td>Sí, absoluta</td></tr>
+            <tr><td>Consultas con persona</td><td>No</td><td>1 consulta escrita/mes</td><td>1 videollamada 20 min* o 3 consultas escritas/mes</td><td>1 sesión de 1 hora guiada por two persons</td></tr>
+            <tr><td>Videollamadas</td><td>No</td><td>No</td><td>Sí (20 min)*</td><td>Sí (1 hora)</td></tr>
+            <tr><td>Nota sobre la videollamada Premium</td><td colspan="4">*Si elige la opción escrita en el Plan Premium, no incluye videollamada.</td></tr>
+            <tr><td>Orientado a</td><td>Personas que quieren apoyo 24/7</td><td>Quieren guía ocasional</td><td>Necesitan claridad mensual con contacto directo</td><td>Buscan respuestas profundas y doble perspectiva</td></tr>
+          </tbody>
+        </table>
+
+        <div class="cta" style="margin-top:14px">
+          <a class="btn" href="mailto:claritydecisiva@gmail.com?subject=Quiero%20contratar%20un%20plan">Quiero contratar</a>
+          <a class="ghost" href="#faq">Preguntas frecuentes</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="card faq">
+      <h3>Preguntas frecuentes</h3>
+      <div>
+        <strong>¿Quién responde en las sesiones?</strong>
+        <p class="small">Las intervenciones humanas se realizan de forma honesta y clara. En el Plan Elite, la sesión mensual es guiada por dos personas para ofrecer doble perspectiva.</p>
+
+        <strong>¿Es confidencial?</strong>
+        <p class="small">Sí. Todo lo que compartas se mantiene en estricta privacidad.</p>
+
+        <strong>¿Puedo mantener anonimato?</strong>
+        <p class="small">Sí. No se comparte con nadie. Es confidencial.</p>
+
+        <strong>¿Puedo cambiar de plan?</strong>
+        <p class="small">Sí. Puedes subir o bajar de plan según tus necesidades.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="card">
+        <p class="small">© Clarity Decisiva — Presentado con honestidad. Si quieres que montemos la landing en una plataforma gratuita, puedo ayudarte a publicarla en GitHub Pages o en otro hosting gratuito.</p>
+        <div style="margin-top:8px"><a class="ghost" href="mailto:claritydecisiva@gmail.com">claritydecisiva@gmail.com</a></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
