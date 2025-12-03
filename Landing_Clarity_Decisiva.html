@@ -21,8 +21,8 @@
     .price{font-weight:700;color:var(--accent);font-size:18px}
     .small{color:var(--muted);font-size:13px}
     .cta{display:flex;gap:10px;margin-top:16px}
-    .btn{background:var(--accent);color:#0b1220;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
-    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white);padding:10px 12px;border-radius:8px}
+    .btn{background:var(--accent);color:#0b1220;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white);padding:10px 12px;border-radius:8px;text-decoration:none}
     .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
     .feature{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px}
     .faq{margin-top:22px}
@@ -31,6 +31,7 @@
     td,th{padding:8px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
     th{color:var(--muted);font-weight:600;font-size:13px}
     .note{font-size:13px;color:var(--muted);margin-top:8px}
+    .btn-small{padding:6px 10px;font-size:14px;border-radius:6px}
     @media(max-width:900px){.hero{grid-template-columns:1fr}.plans{flex-direction:column}}
   </style>
 </head>
@@ -56,7 +57,7 @@
 
         <div class="features">
           <div class="feature"><strong>24/7 disponible</strong><div class="small">Acceso continuado a la IA de claridad.</div></div>
-          <div class="feature"><strong>Anonimato</strong><div class="small">Tu identidad puede mantenerse en privado.</div></div>
+          <div class="feature"><strong>Anonimato</strong><div class="small">Tu identidad se mantiene en privado.</div></div>
           <div class="feature"><strong>Sencillo</strong><div class="small">Sin papeleo ni complejidades técnicas.</div></div>
           <div class="feature"><strong>Flexible</strong><div class="small">Elige la forma de contacto que prefieras.</div></div>
         </div>
@@ -73,10 +74,53 @@
         <h3>Empieza ahora</h3>
         <p class="small">Elige un plan y comienza a recibir claridad hoy mismo.</p>
         <div style="margin-top:10px" id="mini-plans">
-          <div class="plan"><div class="left"><strong>Plan Base</strong><div class="small">Acceso 24/7 · Chat ilimitado</div></div><div class="price">29 €/mes</div></div>
-          <div class="plan"><div class="left"><strong>Plan Plus</strong><div class="small">Acceso 24/7 · 1 consulta escrita/mes (24–48h)</div></div><div class="price">49 €/mes</div></div>
-          <div class="plan"><div class="left"><strong>Plan Premium</strong><div class="small">Acceso 24/7 · Prioridad · 1 videollamada 20min * o 3 consultas escritas</div></div><div class="price">99 €/mes</div></div>
-          <div class="plan"><div class="left"><strong>Plan Elite</strong><div class="small">Acceso 24/7 · Prioridad absoluta · 1 sesión de 1 hora guiada por dos personas</div></div><div class="price">239 €/mes</div></div>
+          <div class="plan">
+            <div class="left">
+              <strong>Plan Base</strong>
+              <div class="small">Acceso 24/7 · Chat ilimitado</div>
+            </div>
+            <div style="text-align:right">
+              <div class="price">29 €/mes</div>
+              <!-- Stripe -->
+              <div style="margin-top:8px"><a class="btn btn-small" href="https://buy.stripe.com/eVqaEYd2YfKhgA387JgQE00" target="_blank" rel="noopener">Contratar</a></div>
+            </div>
+          </div>
+
+          <div class="plan">
+            <div class="left">
+              <strong>Plan Plus</strong>
+              <div class="small">Acceso 24/7 · 1 consulta escrita/mes (24–48h)</div>
+            </div>
+            <div style="text-align:right">
+              <div class="price">49 €/mes</div>
+              <!-- Stripe -->
+              <div style="margin-top:8px"><a class="btn btn-small" href="https://buy.stripe.com/dRm28sfb60Pn5Vpds3gQE01" target="_blank" rel="noopener">Contratar</a></div>
+            </div>
+          </div>
+
+          <div class="plan">
+            <div class="left">
+              <strong>Plan Premium</strong>
+              <div class="small">Acceso 24/7 · Prioridad · 1 videollamada 20min * o 3 consultas escritas</div>
+            </div>
+            <div style="text-align:right">
+              <div class="price">99 €/mes</div>
+              <!-- Stripe -->
+              <div style="margin-top:8px"><a class="btn btn-small" href="https://buy.stripe.com/4gM14o4wsfKhbFjFabgQE02" target="_blank" rel="noopener">Contratar</a></div>
+            </div>
+          </div>
+
+          <div class="plan">
+            <div class="left">
+              <strong>Plan Elite</strong>
+              <div class="small">Acceso 24/7 · Prioridad absoluta · 1 sesión de 1 hora guiada por dos personas</div>
+            </div>
+            <div style="text-align:right">
+              <div class="price">239 €/mes</div>
+              <!-- Stripe -->
+              <div style="margin-top:8px"><a class="btn btn-small" href="https://buy.stripe.com/3cIbJ26EAc y52JdgEfgQE03" target="_blank" rel="noopener">Contratar</a></div>
+            </div>
+          </div>
         </div>
         <div style="margin-top:12px;display:flex;gap:8px">
           <a class="btn" href="#planes">Ver detalles</a>
@@ -103,6 +147,28 @@
             <tr><td>Videollamadas</td><td>No</td><td>No</td><td>Sí (20 min)*</td><td>Sí (1 hora)</td></tr>
             <tr><td>Nota sobre la videollamada Premium</td><td colspan="4">*Si elige la opción escrita en el Plan Premium, no incluye videollamada.</td></tr>
             <tr><td>Orientado a</td><td>Personas que quieren apoyo 24/7</td><td>Quieren guía ocasional</td><td>Necesitan claridad mensual con contacto directo</td><td>Buscan respuestas profundas y doble perspectiva</td></tr>
+
+            <!-- fila de contratación con botones Stripe -->
+            <tr>
+              <td>Contratar</td>
+              <td>
+                <!-- Stripe -->
+                <a class="btn" href="https://buy.stripe.com/eVqaEYd2YfKhgA387JgQE00" target="_blank" rel="noopener">Contratar Plan Base</a>
+              </td>
+              <td>
+                <!-- Stripe -->
+                <a class="btn" href="https://buy.stripe.com/dRm28sfb60Pn5Vpds3gQE01" target="_blank" rel="noopener">Contratar Plan Plus</a>
+              </td>
+              <td>
+                <!-- Stripe -->
+                <a class="btn" href="https://buy.stripe.com/4gM14o4wsfKhbFjFabgQE02" target="_blank" rel="noopener">Contratar Plan Premium</a>
+              </td>
+              <td>
+                <!-- Stripe -->
+                <a class="btn" href="https://buy.stripe.com/3cIbJ26EAc y52JdgEfgQE03" target="_blank" rel="noopener">Contratar Plan Elite</a>
+              </td>
+            </tr>
+
           </tbody>
         </table>
 
